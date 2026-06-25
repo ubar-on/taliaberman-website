@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>בנימה אישית | טליה ברמן</title>
+  <meta name="google-site-verification" content="wvSyn234b7e5W_VghEFBSNyeBVhaJnIsU5LGIBHM6LA">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <a href="/" class="nav-logo"><img src="/images/logo.png" alt="טליה ברמן לוגו"></a>
+    <ul class="nav-links">
+      <li><a href="/">בית</a></li>
+      <li><a href="/אודות-הדרך/">אודות</a></li>
+      <li><a href="/אודות/" aria-current="page">בנימה אישית</a></li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">ייעוץ ואימון ▾</button>
+        <ul class="dropdown">
+          <li><a href="/ייעוץ-אישי-עין-הבדולח/">ייעוץ אישי - עין הבדולח</a></li>
+          <li><a href="/אימון-זוגי/">אימון זוגי</a></li>
+          <li><a href="/מרווקות-לזוגיות/">מרווקות לזוגיות</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<main class="container page-content">
+  <div style="display:flex; gap:40px; align-items:flex-start; flex-wrap:wrap;">
+    <div style="flex:1; min-width:260px;">
+      <h1>בנימה אישית</h1>
+      <p>נעים להכיר, שמי טליה ברמן, בת למשפחה אוהבת, נשואה באהבה למיכאל. יועצת בכירה לבריאות הנפש עין הבדולח, מאמנת זוגית, מלווה תהליכי צמיחה והתפתחות אישיים וזוגיים.</p>
+      <p>מאחוריי קריירה ארוכה של ניהול בתחום ההפקות, בה הייתה לי הזכות לתמוך וללוות אנשים בזמנים שונים בחייהם באופן אישי ומקצועי. באותן שנים עברתי טיפולי פוריות שלוו בטלטלה וציפייה, בין קושי לתקווה, שהובילו אותי להיענות לקריאה פנימית שהגיע זמני לצאת אל "המסע" לניהול הנפש שלי.</p>
+      <p>הדרך הובילה אותי אל המקום בו אני נמצאת היום, להושיט יד לאנשים במסע חייהם, מתוך אמונה ואופטימיות שכולנו צועדים באותה דרך ולכל אחד השביל הייחודי לו, ניסיון חייו ואישיותו.</p>
+      <p>מתוך סקרנות ורצון להבין את העולם שמעבר, שתמיד ריתק אותי, אני לומדת ומתעמקת בתורת החסידות והקבלה, המעניקה לי ראייה רחבה ובהירה בעבודתי אשר התפתחה מתוך תהליך אישי ולימוד גישות שונות.</p>
+      <p>במה שונה במהותה הדרך בה אני עובדת? הנגיעה בהיבט הרגשי רוחני של הכאב עד לשורשו.</p>
+      <p>אני עוד "יד" מושטת בצידי הדרך, מיני רבות וטובות. אם זה מרגיש לך נכון ומתאים אשמח לפגוש אותך.</p>
+
+      <h2>תעודות והסמכות</h2>
+      <ul>
+        <li>B.A בניהול, האוניברסיטה פתוחה</li>
+        <li>יועצת בכירה לרפואת הנפש בדרך היהדות, מכללת אילמה</li>
+        <li>אימון זוגי, מכון טוב ומיטיב</li>
+        <li>התמחות מתקדמת באימון לאהבה וזוגיות, BLUEBIRD ACADEMY</li>
+        <li>מנטורית בעמותת "חיבורים" ליווי למציאת זוגיות</li>
+        <li>רייקי, העבודה, דמיון מודרך, הו'אופונופונו וכלים נוספים</li>
+      </ul>
+    </div>
+    <img src="/images/profile-photo.jpg" alt="טליה ברמן" style="width:260px; flex-shrink:0; object-fit:cover;">
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-contact">
+      <span><a href="tel:052-3238867">052-3238867</a></span>
+      <span><a href="mailto:t@ilact.com">t@ilact.com</a></span>
+    </div>
+    <p>טליה ברמן ייעוץ ואימון אישי זוגי | רמת השרון</p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.dropdown-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const li = btn.closest('.has-dropdown');
+    const open = li.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+});
+</script>
+</body>
+</html>
