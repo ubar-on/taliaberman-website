@@ -27,6 +27,12 @@
 - Blog/post functionality — the "שווה קריאה" section on the home page has no live linked posts; the 4 landing pages (מתח, אחיזה, יחסים, עצמי) are migrated as static HTML
 - Contact form — none exists on the current site
 
+### Intentional deviations from Wix (improvements)
+1. **"שווה קריאה" section (home page)** — hidden via `display:none` on its wrapper; HTML preserved in full so it can be re-enabled by removing one CSS rule
+2. **"בית" nav item** — currently unlinked on Wix; will link to `/`
+3. **Footer phone number** — currently plain text on Wix; will be wrapped in a `tel:` link
+4. **Testimonials carousel** — reproduced with vanilla JS (see Section 10)
+
 ---
 
 ## 2. Technology Stack
@@ -166,16 +172,45 @@ Additional images (strip image, decorative) will be collected during implementat
 
 ## 8. Navigation
 
-The existing Wix navigation structure (extracted from page descriptions):
+Navigation bar items (RTL order, right to left):
 
-**אודות · בנימה אישית · ייעוץ ואימון · ייעוץ אישי - עין הבדולח · אימון זוגי · מרווקות לזוגיות · שווה קריאה**
+**בית · אודות הדרך · בנימה אישית · ייעוץ אישי - עין הבדולח · אימון זוגי · מרווקות לזוגיות**
 
-The "שווה קריאה" nav item links to the 4 confirmed landing pages (מתח, אחיזה, יחסים, עצמי). Two labels visible on the home page (אל עצמי, רצון) have no corresponding pages in the sitemap and are not migrated. Navigation is duplicated in each HTML file (no templating engine).
+- "בית" links to `/` (fixed from Wix where it was unlinked)
+- "שווה קריאה" is removed from the nav (section hidden on home page, can be restored later)
+- Two labels visible in the home page "שווה קריאה" section (אל עצמי, רצון) have no corresponding pages in the sitemap and are not migrated
+- Navigation HTML is duplicated in each of the 10 files (no templating engine)
 
 ---
 
 ## 9. What Is Not Replicated
 
-- Wix animations and scroll effects — not replicated; static layout only
+- Wix scroll effects and entrance animations — not replicated; static layout only
 - Wix blog/members/comments infrastructure
 - Wix SEO redirects — the URL structure is preserved so no redirects are needed
+
+---
+
+## 10. Testimonials Carousel
+
+The home page social proof section contains rotating testimonials. Reproduced with ~20 lines of vanilla JS (no library).
+
+**Behaviour:** One testimonial visible at a time; auto-advances every ~5 seconds with a CSS fade transition. No external dependencies.
+
+**Structure:**
+```html
+<section class="testimonials">
+  <div class="testimonial active">
+    <blockquote>״...״</blockquote>
+    <cite>— שם</cite>
+  </div>
+  <div class="testimonial">...</div>
+  <!-- additional testimonials -->
+</section>
+```
+
+**CSS:** `.testimonial` hidden by default (`opacity: 0`); `.testimonial.active` fades in via `transition: opacity 0.6s ease`.
+
+**JS:** Cycles the `active` class through testimonials on a `setInterval`. Inlined at the bottom of `index.html` — no separate JS file needed.
+
+The actual testimonial quotes and names will be extracted from the live Wix page HTML during implementation (only one was visible in the markdown scrape; the full list requires inspecting the rendered DOM).
