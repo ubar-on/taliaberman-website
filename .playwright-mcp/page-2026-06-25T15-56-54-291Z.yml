@@ -1,0 +1,241 @@
+- generic [ref=e3]:
+  - region "top of page"
+  - button "לדלג לתוכן הראשי"
+  - generic [ref=e10]:
+    - banner [ref=e11]:
+      - navigation "אתר" [ref=e28]:
+        - list [ref=e29]:
+          - listitem [ref=e30] [cursor=pointer]:
+            - link "בית" [ref=e31]:
+              - /url: https://www.taliaberman.com
+              - paragraph [ref=e34]: בית
+          - listitem [ref=e35] [cursor=pointer]:
+            - link "אודות" [ref=e36]:
+              - /url: https://www.taliaberman.com/אודות-הדרך
+              - paragraph [ref=e39]: אודות
+          - listitem [ref=e40] [cursor=pointer]:
+            - link "בנימה אישית" [ref=e41]:
+              - /url: https://www.taliaberman.com/אודות
+              - paragraph [ref=e44]: בנימה אישית
+          - listitem [ref=e45] [cursor=pointer]:
+            - link "ייעוץ ואימון" [ref=e46]:
+              - /url: https://www.taliaberman.com
+              - paragraph [ref=e49]: ייעוץ ואימון
+            - button "עוד עמודים של ייעוץ ואימון" [ref=e50]:
+              - img [ref=e51]
+          - listitem [ref=e53] [cursor=pointer]:
+            - link "שווה קריאה" [ref=e54]:
+              - /url: https://www.taliaberman.com
+              - paragraph [ref=e57]: שווה קריאה
+          - listitem [ref=e58] [cursor=pointer]:
+            - link "צור קשר" [ref=e59]:
+              - /url: https://www.taliaberman.com
+              - paragraph [ref=e62]: צור קשר
+    - main [ref=e67]:
+      - generic [ref=e72]:
+        - generic:
+          - generic:
+            - generic:
+              - generic [ref=e82]:
+                - img "loader,gif" [ref=e87]
+                - generic [ref=e93]:
+                  - generic:
+                    - generic:
+                      - generic "a99131_16a547c833124b43a42601421ebe2464~mv2.png" [ref=e98]:
+                        - img "לוגו של העסק" [ref=e100]
+                      - generic:
+                        - paragraph [ref=e101]:
+                          - generic [ref=e104]: בהגיעי תפתח הדלת
+                        - paragraph [ref=e105]:
+                          - generic [ref=e108]: אל היד המושטת
+                        - paragraph [ref=e109]:
+                          - generic [ref=e112]: אל חום לבבך
+                        - paragraph [ref=e113]:
+                          - generic [ref=e116]: אל שמחת משכנך
+                        - paragraph [ref=e117]
+              - generic [ref=e118]:
+                - generic:
+                  - generic:
+                    - heading "טליה ברמן ייעוץ ואימון אישי זוגי" [level=5] [ref=e122]:
+                      - generic [ref=e125]: טליה ברמן ייעוץ ואימון אישי זוגי
+                    - generic [ref=e130]:
+                      - generic [ref=e131]:
+                        - generic:
+                          - generic:
+                            - heading "אודות הדרך" [level=5] [ref=e135]:
+                              - generic [ref=e137]: אודות הדרך
+                            - generic:
+                              - paragraph [ref=e138]: בכל אדם קיים טוב וחבוי פוטנציאל פנימי שרק רוצה להתעורר ולממש את הטוב שבו, להוציא מן הכוח אל הפועל,
+                              - paragraph [ref=e139]: זהו הבסיס לכל תהליך בו אני מלווה אנשים.
+                              - paragraph [ref=e140]
+                              - paragraph [ref=e141]: אני מאמינה ביכולת של כל אדם לצמוח ולקחת אחריות על חייו, דרך התבוננות כנה ורצון לפעול בהתמדה. להיפרד מסערות הנפש, להיטיב עם עצמנו והסובבים אותנו, לתת את תרומתנו לעולם, מתוך אמונה שהחיים טובים והם ניתנו לנו כמתנה.
+                              - paragraph [ref=e142]
+                              - paragraph [ref=e143]:
+                                - generic [ref=e144]: בכל מפגש נעבוד על האתגר איתו אתם מתמודדים בהווה. נפסיק לראות עצמנו כ"קורבנות" של נסיבות חיצוניות ושל עברנו, נרפה מאמונות מגבילות ותגובות אוטומטיות, נתוודע אל מהות חיינו וייעודנו. נלמד כלים ונתרגל אותם יחד על מנת שתוכלו לעשות זאת בעצמכם ללא ליווי ולהמשיך לצמוח בחייכם.
+                            - paragraph [ref=e145]:
+                              - link "קרא עוד" [ref=e147] [cursor=pointer]:
+                                - /url: https://www.taliaberman.com/אודות-הדרך
+                                - generic [ref=e148]: קרא עוד
+                      - img "100_edited.jpg" [ref=e154]
+                      - generic [ref=e155]:
+                        - generic:
+                          - generic:
+                            - heading "בנימה אישית" [level=5] [ref=e159]:
+                              - generic [ref=e161]: בנימה אישית
+                            - generic:
+                              - paragraph [ref=e162]:
+                                - generic [ref=e163]: נעים להכיר, שמי טליה ברמן, בת למשפחה אוהבת, נשואה באהבה למיכאל.
+                              - paragraph [ref=e164]:
+                                - generic [ref=e165]: יועצת בכירה לבריאות הנפש עין הבדולח, מאמנת זוגית, מלווה תהליכי צמיחה והתפתחות אישיים וזוגיים.
+                              - paragraph [ref=e166]
+                              - paragraph [ref=e167]:
+                                - generic [ref=e168]: מאחוריי קריירה ארוכה של ניהול בתחום ההפקות, בה הייתה לי הזכות לתמוך וללוות אנשים בזמנים שונים בחייהם באופן אישי ומקצועי. באותן שנים עברתי טיפולי פוריות שלוו בטלטלה וציפייה, בין קושי לתקווה, שהובילו אותי להיענות לקריאה פנימית שהגיע זמני לצאת אל "המסע" לניהול הנפש שלי.
+                            - paragraph [ref=e169]:
+                              - link "קרא עוד" [ref=e172] [cursor=pointer]:
+                                - /url: https://www.taliaberman.com/אודות
+              - generic [ref=e173]:
+                - generic:
+                  - generic:
+                    - generic [ref=e181]:
+                      - generic [ref=e182]:
+                        - generic:
+                          - generic:
+                            - img [ref=e188]
+                            - heading "צעדים מרווקות לזוגיות" [level=5] [ref=e191]:
+                              - generic [ref=e195]: צעדים מרווקות לזוגיות
+                            - generic:
+                              - paragraph [ref=e196]:
+                                - generic [ref=e197]: הייאוש לא נעשה יותר נח, הרגשה מוכרת?
+                              - paragraph [ref=e198]: התדמית שסיגלתי לעצמי עוזרת לי להסתיר את העולם הפנימי ואת הרגשות שלי, עוזרת לי לחוש בטחון, אבל היא מביאה איתה גם בדידות כואבת, כזאת שלא מאפשרת לי לשתף עם אף אחד.
+                              - paragraph [ref=e199]
+                              - paragraph [ref=e200]: כולם מאד רוצים זוגיות אבל חוששים לעבור שינוי כי לפעמים הוא כרוך בכאב. לא תמיד קל להתמודד עם כל הרעשים והלחצים מהמשפחה והסביבה בעוד שקולך הפנימי הולך ונעלם, אבל כשמגיעים לזה בתהליך הנכון זה קצת פחות מפחיד ואפילו מרגש.
+                              - paragraph [ref=e201]
+                              - paragraph [ref=e202]:
+                                - generic [ref=e203]: את/ה רוצה למצוא את בן/בת הזוג המתאים/ה לך, שתוכל/י לסמוך עליו/ה ולבנות איתו/ה יחד בית יציב ומשפחה שמחה.
+                              - paragraph [ref=e204]:
+                                - generic [ref=e206]: התשובות נמצאות אצלך והדרך למציאת בן/בת הזוג המתאים עבורך, מתחילה קודם כל בתוכך.
+                              - paragraph [ref=e207]
+                            - paragraph [ref=e208]:
+                              - link "קרא עוד" [ref=e210] [cursor=pointer]:
+                                - /url: https://www.taliaberman.com/מרווקות-לזוגיות
+                                - generic [ref=e211]: קרא עוד
+                      - generic [ref=e212]:
+                        - generic:
+                          - generic:
+                            - img [ref=e218]
+                            - heading "אימון זוגי" [level=5] [ref=e221]:
+                              - generic [ref=e222]: אימון זוגי
+                            - generic:
+                              - paragraph [ref=e223]: זוגיות טובה היא דבר מרכזי בבריאות הנפשית של האדם ומשפיעה על אושרו. כולנו רוצים להרגיש אהובים ומקובלים, גם בחלקים הפגיעים והפחות "מחמיאים" שלנו, כולנו רוצים לדעת שאנחנו יכולים להיות חלשים וחשופים מול בן הזוג שלנו, בלי שזה יגרור ביקורת או זלזול.
+                              - paragraph [ref=e224]
+                              - paragraph [ref=e225]: זוגות יכולים לחיות בסבל שנים בלי לבקש עזרה או תמיכה, קל יותר להתנתק ולתת למערכת היחסים לדעוך. אף אחד לא אוהב מריבות וכעסים, ההימנעות מלדבר על הקשיים מייצר כאב שלאט לאט צף עד שהוא מתפרץ.
+                              - paragraph [ref=e226]
+                              - paragraph [ref=e227]:
+                                - generic [ref=e228]: רוצים זוגיות שמחה? היא זקוקה לתחזוקה, היא דורשת מחויבות, מוטיבציה ועשייה.
+                              - paragraph [ref=e229]
+                              - paragraph [ref=e230]:
+                                - generic [ref=e231]: בשניים זה נכון וחשוב, אבל גם שינוי אצל אחד מבני הזוג יכול לייצר שינוי משמעותי במערכת היחסים!
+                              - paragraph [ref=e232]
+                            - paragraph [ref=e233]:
+                              - link "קרא עוד" [ref=e235] [cursor=pointer]:
+                                - /url: https://www.taliaberman.com/אימון-זוגי
+                                - generic [ref=e236]: קרא עוד
+                      - generic [ref=e237]:
+                        - generic:
+                          - generic:
+                            - img [ref=e243]
+                            - heading "ייעוץ ואימון אישי" [level=5] [ref=e246]:
+                              - generic [ref=e247]: ייעוץ ואימון אישי
+                            - generic:
+                              - paragraph [ref=e248]:
+                                - generic [ref=e249]:
+                                  - text: בריאות הנפש בדרך היהדות -עין הבדולח, היא עבודה שורשית ועמוקה המתמקדת במפגש של האדם עם האתגרים והאירועים בהווה, היא מסייעת בהסרת החסמים הרגשיים, ביציאה ממשברים ושחרור מגורמי סטרס אחרים, נועדה לעזור לנו למצוא
+                                  - generic [ref=e250]: כוח ותקווה לחיים.
+                              - paragraph [ref=e251]
+                              - paragraph [ref=e253]:
+                                - generic [ref=e254]: חכמת החסידות מגלה לנו את הקשר בין גוף לנפש ובין הנסתר לגלוי השזורים זה בזה במעגל החיים.
+                              - paragraph [ref=e255]:
+                                - generic [ref=e257]: לכל אדם יש את היכולת והזכות ללמוד את חכמת הבריאה, את הכוחות הפועלים במציאות, ולהנהיג את חייו בחכמה ובתבונה מתוך תכלית ומשמעות.
+                              - paragraph [ref=e258]
+                              - paragraph [ref=e260]:
+                                - generic [ref=e262]: "\"החופש\" ומציאת הייעוד מתחילים בהכרת הרצונות האמיתיים, המוסתרים והסותרים שלנו, דרך עבודת התבוננות מודעת המאפשרת לנו להסתכל גבוה יותר מהמקום בו אנו נמצאים, למרות הקושי והכאב."
+                              - paragraph [ref=e263]
+                            - paragraph [ref=e265]:
+                              - link "קרא עוד" [ref=e267] [cursor=pointer]:
+                                - /url: https://www.taliaberman.com/ייעוץ-אישי-עין-הבדולח
+                                - generic [ref=e268]: קרא עוד
+                    - region "Therapy Sessions"
+              - generic [ref=e269]:
+                - generic:
+                  - generic:
+                    - heading "שווה קריאה" [level=2] [ref=e273]:
+                      - generic [ref=e275]: שווה קריאה
+                    - img [ref=e278]
+                    - img [ref=e283]
+                    - paragraph [ref=e286]:
+                      - generic [ref=e289]: אחיזה
+                    - img [ref=e292]
+                    - img [ref=e297]
+                    - paragraph [ref=e300]:
+                      - generic [ref=e303]: אל עצמי
+                    - img [ref=e306]
+                    - img [ref=e311]
+                    - paragraph [ref=e314]:
+                      - generic [ref=e317]: מתח
+                    - img [ref=e320]
+                    - img [ref=e325]
+                    - paragraph [ref=e328]:
+                      - generic [ref=e331]: יחסים
+                    - img [ref=e334]
+                    - img [ref=e339]
+                    - paragraph [ref=e342]:
+                      - generic [ref=e345]: רצון
+              - region "מצגת" [active] [ref=e350]:
+                - generic [ref=e351]:
+                  - generic [ref=e430]:
+                    - generic:
+                      - generic:
+                        - blockquote [ref=e434]:
+                          - generic [ref=e437]: "\"טליה השיחות שלנו תמיד עושות רק טוב, אני רוצה להגיד תודה על התמיכה הרגשית והרוחנית, על הדרך שעברתי , בשבילי זה היה בום (כמו שהילי אומרת)\""
+                        - paragraph [ref=e438]:
+                          - generic [ref=e441]: שרון
+                  - generic [ref=e418]:
+                    - generic:
+                      - generic:
+                        - blockquote [ref=e422]:
+                          - generic [ref=e425]: "\"תודה על אוזן קשבת, למדתי איתך וממך הרבה על עצמי, אני מאוד מעריכה אותך על האמת הפשוטה והכנות שבך\""
+                        - paragraph [ref=e426]:
+                          - generic [ref=e429]: ענבר
+                - navigation "שקופיות" [ref=e368]:
+                  - list:
+                    - listitem:
+                      - link "Slide 1" [ref=e369] [cursor=pointer]:
+                        - /url: ./#comp-j6ue3q1e
+                    - listitem:
+                      - link "Slide 2" [ref=e370] [cursor=pointer]:
+                        - /url: ./#comp-j6ue6ces
+                    - listitem:
+                      - link "Slide 3" [ref=e371] [cursor=pointer]:
+                        - /url: ./#comp-lwj46us2
+                    - listitem:
+                      - link "slide 4" [ref=e372] [cursor=pointer]:
+                        - /url: ./#comp-lwj5xb8n
+                    - listitem:
+                      - link "slide 5" [ref=e373] [cursor=pointer]:
+                        - /url: ./#comp-lwj5xjfs
+    - contentinfo [ref=e374]:
+      - generic [ref=e381]:
+        - generic:
+          - generic:
+            - img [ref=e385]
+            - img [ref=e390]
+            - paragraph [ref=e394]:
+              - link "t@ilact.com" [ref=e395] [cursor=pointer]:
+                - /url: mailto:t@ilact.com
+                - generic [ref=e398]: t@ilact.com
+            - paragraph [ref=e399]:
+              - generic [ref=e400]: 052-3238867
+            - img [ref=e403]
+            - heading "רמת השרון" [level=2] [ref=e406]:
+              - generic [ref=e408]: רמת השרון
+  - region "bottom of page"
