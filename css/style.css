@@ -1,0 +1,329 @@
+/* ── Fonts ── */
+@font-face {
+  font-family: 'Assistant';
+  src: url('/fonts/Assistant-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Assistant';
+  src: url('/fonts/Assistant-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Assistant';
+  src: url('/fonts/Assistant-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Adler';
+  src: url('/fonts/Adler.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  direction: rtl;
+}
+
+body {
+  font-family: 'Assistant', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #000000;
+  background-color: #FFF8F1;
+}
+
+a { color: #39251C; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* ── Layout ── */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Navigation ── */
+.site-nav {
+  background-color: #FFF8F1;
+  border-bottom: 1px solid #e8ddd4;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.nav-logo img {
+  height: 48px;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-direction: row-reverse;
+}
+
+.nav-links > li {
+  position: relative;
+}
+
+.nav-links a,
+.nav-links .dropdown-toggle {
+  display: block;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  white-space: nowrap;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+
+.nav-links a:hover,
+.nav-links .dropdown-toggle:hover { color: #39251C; text-decoration: none; }
+
+/* Dropdown */
+.nav-links .has-dropdown { position: relative; }
+
+.nav-links .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #FFF8F1;
+  border: 1px solid #e8ddd4;
+  list-style: none;
+  min-width: 200px;
+  z-index: 200;
+}
+
+.nav-links .has-dropdown:hover .dropdown,
+.nav-links .has-dropdown.open .dropdown { display: block; }
+
+.nav-links .dropdown li a {
+  padding: 10px 16px;
+  font-weight: 400;
+  display: block;
+}
+
+.nav-links .dropdown li a:hover { background: #f0e8e0; }
+
+/* ── Page Hero / Banner ── */
+.page-hero {
+  width: 100%;
+  max-height: 320px;
+  overflow: hidden;
+}
+
+.page-hero img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ── Page Content ── */
+.page-content {
+  padding: 48px 0;
+}
+
+.page-content h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #39251C;
+}
+
+.page-content h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  color: #39251C;
+}
+
+.page-content p {
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.page-content ul {
+  margin: 0 24px 16px 0;
+}
+
+.page-content ul li {
+  margin-bottom: 8px;
+}
+
+/* ── Home Hero ── */
+.home-hero {
+  position: relative;
+  text-align: center;
+}
+
+.home-hero-banner {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+}
+
+.home-logo {
+  display: block;
+  margin: 32px auto 16px;
+  max-width: 280px;
+}
+
+.home-poem {
+  font-size: 22px;
+  line-height: 2;
+  color: #39251C;
+  text-align: center;
+  padding: 16px 24px 32px;
+}
+
+/* ── Home Service Sections ── */
+.service-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 48px 0;
+  border-bottom: 1px solid #e8ddd4;
+}
+
+.service-section:nth-child(even) { flex-direction: row-reverse; }
+
+.service-section img {
+  width: 360px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.service-section .service-text h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #39251C;
+}
+
+.service-section .service-text p { font-size: 17px; margin-bottom: 12px; }
+
+.read-more {
+  display: inline-block;
+  margin-top: 12px;
+  color: #39251C;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* ── Testimonials Carousel ── */
+.testimonials {
+  background: #39251C;
+  color: #FFF8F1;
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: #FFF8F1;
+  margin-bottom: 32px;
+  font-size: 24px;
+}
+
+.testimonial-slide {
+  display: none;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.testimonial-slide.active {
+  display: block;
+  opacity: 1;
+}
+
+.testimonial-slide blockquote {
+  font-family: 'Adler', cursive;
+  font-size: 26px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  color: #FFF8F1;
+}
+
+.testimonial-slide cite {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.testimonial-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,248,241,0.4);
+  cursor: pointer;
+  padding: 0;
+}
+
+.testimonial-dots button.active { background: #FFF8F1; }
+
+/* ── שווה קריאה (hidden, preserved for future) ── */
+.shave-kriya { display: none; }
+
+/* ── Footer ── */
+.site-footer {
+  background: #39251C;
+  color: #FFF8F1;
+  padding: 40px 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+.site-footer a { color: #FFF8F1; }
+.site-footer a:hover { text-decoration: underline; }
+
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .service-section { flex-direction: column !important; }
+  .service-section img { width: 100%; }
+  .nav-links { gap: 0; }
+  .nav-links a, .nav-links .dropdown-toggle { padding: 8px 8px; font-size: 14px; }
+  .home-poem { font-size: 18px; }
+  .testimonial-slide blockquote { font-size: 20px; }
+}
