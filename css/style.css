@@ -81,7 +81,6 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex;
   align-items: center;
   gap: 8px;
-  flex-direction: row-reverse;
 }
 
 .nav-links > li {
