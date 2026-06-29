@@ -187,8 +187,10 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .home-logo {
-  display: block;
-  margin: 32px auto 16px;
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
   max-width: 280px;
 }
 
@@ -215,6 +217,10 @@ img { max-width: 100%; height: auto; display: block; }
   width: 360px;
   flex-shrink: 0;
   object-fit: cover;
+}
+
+.service-section .service-text {
+  flex: 1;
 }
 
 .service-section .service-text h2 {
