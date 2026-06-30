@@ -203,34 +203,79 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* ── Home Service Sections ── */
-.service-section {
+.services-row1 {
   display: flex;
-  align-items: center;
-  gap: 40px;
-  padding: 48px 0;
-  border-bottom: 1px solid #e8ddd4;
+  width: 100%;
 }
 
-.service-section:nth-child(even) { flex-direction: row-reverse; }
+.service-col {
+  flex: 1;
+  padding: 48px 40px;
+}
 
-.service-section img {
-  width: 360px;
+.service-col--about {
+  background: rgba(224, 190, 154, 0.3);
+}
+
+.service-col--personal {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  background: rgba(224, 190, 154, 0.15);
+}
+
+.service-col--personal > div { flex: 1; min-width: 0; }
+
+.service-col--personal img {
+  width: 200px;
   flex-shrink: 0;
   object-fit: cover;
 }
 
-.service-section .service-text {
-  flex: 1;
-}
-
-.service-section .service-text h2 {
+.service-col h2 {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 16px;
   color: #39251C;
 }
 
-.service-section .service-text p { font-size: 17px; margin-bottom: 12px; }
+.service-col p { font-size: 17px; margin-bottom: 12px; }
+
+/* 3-column service cards */
+.services-row2 {
+  display: flex;
+  width: 100%;
+}
+
+.service-card {
+  flex: 1;
+  padding: 48px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-card--counseling { background: #E5C7B5; color: #39251C; }
+.service-card--couples    { background: #E0BE9A; color: #39251C; }
+.service-card--singles    { background: #AB6E54; color: #FFF8F1; }
+
+.card-icon {
+  font-size: 28px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.service-card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.service-card p { font-size: 17px; margin-bottom: 12px; }
+
+.service-card .read-more { margin-top: auto; }
+.service-card--singles .read-more { color: #FFF8F1; }
 
 .read-more {
   display: inline-block;
@@ -242,14 +287,14 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ── Testimonials Carousel ── */
 .testimonials {
-  background: #39251C;
-  color: #FFF8F1;
+  background: #E5C7B5;
+  color: #39251C;
   padding: 64px 24px;
   text-align: center;
 }
 
 .testimonials h2 {
-  color: #FFF8F1;
+  color: #39251C;
   margin-bottom: 32px;
   font-size: 24px;
 }
@@ -293,12 +338,12 @@ img { max-width: 100%; height: auto; display: block; }
   height: 10px;
   border-radius: 50%;
   border: none;
-  background: rgba(255,248,241,0.4);
+  background: rgba(57, 37, 28, 0.25);
   cursor: pointer;
   padding: 0;
 }
 
-.testimonial-dots button.active { background: #FFF8F1; }
+.testimonial-dots button.active { background: #39251C; }
 
 /* ── שווה קריאה (hidden, preserved for future) ── */
 .shave-kriya { display: none; }
@@ -325,8 +370,9 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
-  .service-section { flex-direction: column !important; }
-  .service-section img { width: 100%; }
+  .services-row1, .services-row2 { flex-direction: column; }
+  .service-col--personal { flex-direction: column; }
+  .service-col--personal img { width: 100%; }
   .nav-links { gap: 0; }
   .nav-links a, .nav-links .dropdown-toggle { padding: 8px 8px; font-size: 14px; }
   .home-poem { font-size: 18px; }
