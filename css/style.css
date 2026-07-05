@@ -27,6 +27,13 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Solitreo';
+  src: url('/fonts/Solitreo-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* ── Reset & Base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -67,13 +74,8 @@ img { max-width: 100%; height: auto; display: block; }
 .site-nav .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 60px;
-}
-
-.nav-logo img {
-  height: 48px;
-  width: auto;
+  justify-content: flex-start;
+  height: 73px;
 }
 
 .nav-links {
@@ -81,6 +83,7 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-left: auto;
 }
 
 .nav-links > li {
@@ -91,8 +94,8 @@ img { max-width: 100%; height: auto; display: block; }
 .nav-links .dropdown-toggle {
   display: block;
   padding: 8px 12px;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 400;
   color: #000;
   white-space: nowrap;
   cursor: pointer;
@@ -178,58 +181,73 @@ img { max-width: 100%; height: auto; display: block; }
 .home-hero {
   position: relative;
   text-align: center;
+  overflow: hidden;
 }
 
 .home-hero-banner {
   width: 100%;
-  max-height: 320px;
+  height: 480px;
   object-fit: cover;
+  display: block;
 }
 
 .home-logo {
   position: absolute;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 280px;
+  top: 94px;
+  right: -78px;
+  left: auto;
+  bottom: auto;
+  transform: none;
+  width: 780px;
+  max-width: none;
 }
 
 .home-poem {
-  font-size: 22px;
-  line-height: 2;
-  color: #39251C;
-  text-align: center;
-  padding: 16px 24px 32px;
+  position: absolute;
+  top: 74px;
+  right: 95px;
+  font-family: 'Solitreo', cursive;
+  font-size: 65px;
+  line-height: 39px;
+  color: #FFF8F1;
+  text-align: right;
+  max-width: none;
+  padding: 0;
 }
 
 /* ── Home Service Sections ── */
 .services-row1 {
   display: flex;
   width: 100%;
+  min-height: 644px;
 }
 
 .service-col {
-  flex: 1;
+  flex: 0 0 25%;
+  min-width: 0;
   padding: 48px 40px;
 }
 
-.service-col--about {
-  background: rgba(224, 190, 154, 0.3);
-}
-
 .service-col--personal {
-  display: flex;
-  gap: 24px;
-  align-items: flex-start;
-  background: rgba(224, 190, 154, 0.15);
+  background: #AD96A0;
 }
 
-.service-col--personal > div { flex: 1; min-width: 0; }
+.service-col--photo {
+  flex: 0 0 25%;
+  padding: 0;
+  background: #82533D;
+}
 
-.service-col--personal img {
-  width: 200px;
-  flex-shrink: 0;
+.service-col--photo img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  display: block;
+}
+
+.service-col--about {
+  flex: 0 0 50%;
+  background: rgba(224, 190, 154, 0.5);
 }
 
 .service-col h2 {
@@ -245,6 +263,7 @@ img { max-width: 100%; height: auto; display: block; }
 .services-row2 {
   display: flex;
   width: 100%;
+  min-height: 681px;
 }
 
 .service-card {
@@ -346,18 +365,75 @@ img { max-width: 100%; height: auto; display: block; }
 .testimonial-dots button.active { background: #39251C; }
 
 /* ── שווה קריאה (hidden, preserved for future) ── */
-.shave-kriya { display: none; }
+.shave-kriya {
+  display: none;
+  background: #FFF8F1;
+  padding: 64px 0;
+  text-align: center;
+}
+
+.shave-kriya h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #39251C;
+  margin-bottom: 40px;
+}
+
+.shave-kriya-icons {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.shave-kriya-icons li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #39251C;
+  text-decoration: none;
+}
+
+.shave-kriya-icons li a:hover { text-decoration: none; }
+
+.kriya-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #AB6E54;
+  color: #FFF8F1;
+  font-size: 26px;
+}
+
+.kriya-label {
+  font-size: 15px;
+  font-weight: 600;
+}
 
 /* ── Footer ── */
 .site-footer {
-  background: #39251C;
-  color: #FFF8F1;
-  padding: 40px 0;
+  background: #FFF8F1;
+  color: #000000;
+  padding: 24px 0 32px;
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
+  position: relative;
 }
 
-.site-footer a { color: #FFF8F1; }
+.site-footer::before {
+  content: '';
+  display: block;
+  height: 59px;
+  background: #5B4D43;
+  margin-bottom: 24px;
+}
+
+.site-footer a { color: #39251C; }
 .site-footer a:hover { text-decoration: underline; }
 
 .footer-contact {
@@ -368,13 +444,27 @@ img { max-width: 100%; height: auto; display: block; }
   margin-bottom: 16px;
 }
 
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-icon {
+  width: 34px;
+  height: 34px;
+  fill: currentColor;
+  color: #39251C;
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
-  .services-row1, .services-row2 { flex-direction: column; }
-  .service-col--personal { flex-direction: column; }
-  .service-col--personal img { width: 100%; }
+  .services-row1, .services-row2 { flex-direction: column; min-height: 0; }
+  .service-col--photo { height: 240px; }
   .nav-links { gap: 0; }
-  .nav-links a, .nav-links .dropdown-toggle { padding: 8px 8px; font-size: 14px; }
-  .home-poem { font-size: 18px; }
+  .nav-links a, .nav-links .dropdown-toggle { padding: 8px 6px; font-size: 13px; }
+  .home-hero-banner { height: 280px; }
+  .home-poem { font-size: 14px; top: 12px; right: 12px; max-width: 160px; }
   .testimonial-slide blockquote { font-size: 20px; }
 }
