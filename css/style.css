@@ -66,9 +66,6 @@ img { max-width: 100%; height: auto; display: block; }
 .site-nav {
   background-color: #FFF8F1;
   border-bottom: 1px solid #e8ddd4;
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 
 .site-nav .container {
@@ -82,7 +79,7 @@ img { max-width: 100%; height: auto; display: block; }
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0;
   margin-left: auto;
 }
 
@@ -93,9 +90,10 @@ img { max-width: 100%; height: auto; display: block; }
 .nav-links a,
 .nav-links .dropdown-toggle {
   display: block;
-  padding: 8px 12px;
+  padding: 0;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 700;
+  line-height: 59px;
   color: #000;
   white-space: nowrap;
   cursor: pointer;
@@ -220,6 +218,7 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex;
   width: 100%;
   min-height: 644px;
+  margin-top: 57px;
 }
 
 .service-col {
@@ -280,9 +279,10 @@ img { max-width: 100%; height: auto; display: block; }
 .service-card--singles    { background: #AB6E54; color: #FFF8F1; }
 
 .card-icon {
-  font-size: 28px;
+  width: 30px;
+  height: 30px;
   margin-bottom: 16px;
-  display: block;
+  fill: #39251C;
 }
 
 .service-card h2 {
@@ -309,6 +309,10 @@ img { max-width: 100%; height: auto; display: block; }
   background: #E5C7B5;
   color: #39251C;
   padding: 64px 24px;
+  min-height: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
 }
 
@@ -419,7 +423,7 @@ img { max-width: 100%; height: auto; display: block; }
 .site-footer {
   background: #FFF8F1;
   color: #000000;
-  padding: 24px 0 32px;
+  padding: 0 0 32px;
   text-align: center;
   font-size: 18px;
   position: relative;
@@ -433,8 +437,7 @@ img { max-width: 100%; height: auto; display: block; }
   margin-bottom: 24px;
 }
 
-.site-footer a { color: #39251C; }
-.site-footer a:hover { text-decoration: underline; }
+.site-footer a { color: #39251C; text-decoration: underline; }
 
 .footer-contact {
   display: flex;
