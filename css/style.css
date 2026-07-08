@@ -46,6 +46,9 @@ body {
 a { color: #39251C; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
+body.bg-tan { background-color: #E0BE9A; }
+body.bg-tan-light { background-color: #F0DBC6; }
+
 img { max-width: 100%; height: auto; display: block; }
 
 /* ── Layout ── */
