@@ -126,18 +126,33 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ── Page Hero / Banner ── */
 .page-hero {
-  width: 100%;
-  max-height: 320px;
-  overflow: hidden;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .page-hero img {
   width: 100%;
-  object-fit: cover;
+  display: block;
+}
+
+.hero-quote {
+  position: absolute;
+  top: 18%;
+  right: 6%;
+  left: 6%;
+  margin: 0;
+  font-family: 'DanaYad', cursive;
+  font-size: 44px;
+  font-weight: 400;
+  color: #000;
+  text-align: right;
 }
 
 /* ── Page Content ── */
 .page-content {
+  max-width: 700px;
+  margin: 0 auto;
   padding: 48px 0;
 }
 
@@ -146,6 +161,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 700;
   margin-bottom: 24px;
   color: #39251C;
+  text-align: center;
 }
 
 .page-content h2 {
@@ -153,11 +169,18 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 700;
   margin: 32px 0 16px;
   color: #39251C;
+  text-align: center;
 }
 
 .page-content p {
   margin-bottom: 16px;
   font-size: 18px;
+  text-align: center;
+}
+
+/* אודות-הדרך is the one subpage whose body copy is right-aligned on live Wix, not centered like the rest */
+.page-content--start p {
+  text-align: start;
 }
 
 .page-content ul {
