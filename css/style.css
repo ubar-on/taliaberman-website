@@ -276,7 +276,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 .service-card--counseling { background: #E5C7B5; color: #39251C; }
 .service-card--couples    { background: #E0BE9A; color: #39251C; }
-.service-card--singles    { background: #AB6E54; color: #FFF8F1; }
+.service-card--singles    { background: #AB6E54; color: #39251C; }
 
 .card-icon {
   width: 30px;
@@ -294,7 +294,6 @@ img { max-width: 100%; height: auto; display: block; }
 .service-card p { font-size: 17px; margin-bottom: 12px; }
 
 .service-card .read-more { margin-top: auto; }
-.service-card--singles .read-more { color: #FFF8F1; }
 
 .read-more {
   display: inline-block;
