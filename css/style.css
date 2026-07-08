@@ -21,15 +21,8 @@
   font-display: swap;
 }
 @font-face {
-  font-family: 'Adler';
-  src: url('/fonts/Adler.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Solitreo';
-  src: url('/fonts/Solitreo-Regular.woff2') format('woff2');
+  font-family: 'DanaYad';
+  src: url('/fonts/DanaYad-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -204,7 +197,7 @@ img { max-width: 100%; height: auto; display: block; }
   position: absolute;
   top: 74px;
   right: 95px;
-  font-family: 'Solitreo', cursive;
+  font-family: 'DanaYad', cursive;
   font-size: 65px;
   line-height: 39px;
   color: #FFF8F1;
@@ -335,11 +328,11 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .testimonial-slide blockquote {
-  font-family: 'Adler', cursive;
+  font-family: 'DanaYad', cursive;
   font-size: 26px;
   line-height: 1.6;
   margin-bottom: 24px;
-  color: #FFF8F1;
+  color: #5B4D43;
 }
 
 .testimonial-slide cite {
