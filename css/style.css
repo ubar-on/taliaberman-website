@@ -422,7 +422,7 @@ img { max-width: 100%; height: auto; display: block; }
 .site-footer {
   background: #FFF8F1;
   color: #000000;
-  padding: 0 0 32px;
+  padding: 0 0 19px;
   text-align: center;
   font-size: 18px;
   position: relative;
@@ -441,9 +441,9 @@ img { max-width: 100%; height: auto; display: block; }
 .footer-contact {
   display: flex;
   justify-content: center;
-  gap: 32px;
+  gap: 105px;
   flex-wrap: wrap;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .footer-item {
