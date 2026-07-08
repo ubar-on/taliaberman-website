@@ -72,7 +72,7 @@ img { max-width: 100%; height: auto; display: block; }
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 0;
+  gap: 64px;
   margin-left: auto;
 }
 
@@ -85,7 +85,7 @@ img { max-width: 100%; height: auto; display: block; }
   display: block;
   padding: 0;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 59px;
   color: #000;
   white-space: nowrap;
