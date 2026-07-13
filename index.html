@@ -94,25 +94,27 @@
   </div>
 
   <section class="testimonials">
-    <div class="testimonial-slide active">
-      <blockquote>"זכינו להכיר אישה מיוחדת,חזקה ומלאת אמונה,עם יכולת נדירה לגעת בכאב, ייאוש לא קיים אצלך בלקסיקון, לוחמת של אהבה ואמת שפיה וליבה שווים"</blockquote>
-      <cite>אריאלי</cite>
-    </div>
-    <div class="testimonial-slide">
-      <blockquote>"תודה על אוזן קשבת, למדתי איתך וממך הרבה על עצמי, אני מאוד מעריכה אותך על האמת הפשוטה והכנות שבך"</blockquote>
-      <cite>ענבר</cite>
-    </div>
-    <div class="testimonial-slide">
-      <blockquote>"טליה השיחות שלנו תמיד עושות רק טוב, אני רוצה להגיד תודה על התמיכה הרגשית והרוחנית, על הדרך שעברתי , בשבילי זה היה בום (כמו שהילי אומרת)"</blockquote>
-      <cite>שרון</cite>
-    </div>
-    <div class="testimonial-slide">
-      <blockquote>"בהמלצת חבר הגעתי סקפטי לגמרי, לא היה פשוט עבורי להיפתח אבל הופתעתי מהאמון שנתתי בך, תודה על הסבלנות."</blockquote>
-      <cite>חגי</cite>
-    </div>
-    <div class="testimonial-slide">
-      <blockquote>"הגעתי אלייך אחרי משבר בזוגיות, מצאתי את עצמי יושבת ובוכה, עם כאב פנימי ובלבול גדול. הושטת לי יד ומשכת אותי למעלה, מכל מפגש יצאתי חזקה יותר ומלאת תקווה. תודה לך טליה אהובה, אין לי ספק שזאת המתנה הכי טובה שיכלתי לתת לעצמי לגיל 38"</blockquote>
-      <cite>אפרת</cite>
+    <div class="testimonials-track">
+      <div class="testimonial-slide active">
+        <blockquote>"זכינו להכיר אישה מיוחדת,חזקה ומלאת אמונה,עם יכולת נדירה לגעת בכאב, ייאוש לא קיים אצלך בלקסיקון, לוחמת של אהבה ואמת שפיה וליבה שווים"</blockquote>
+        <cite>אריאלי</cite>
+      </div>
+      <div class="testimonial-slide">
+        <blockquote>"תודה על אוזן קשבת, למדתי איתך וממך הרבה על עצמי, אני מאוד מעריכה אותך על האמת הפשוטה והכנות שבך"</blockquote>
+        <cite>ענבר</cite>
+      </div>
+      <div class="testimonial-slide">
+        <blockquote>"טליה השיחות שלנו תמיד עושות רק טוב, אני רוצה להגיד תודה על התמיכה הרגשית והרוחנית, על הדרך שעברתי , בשבילי זה היה בום (כמו שהילי אומרת)"</blockquote>
+        <cite>שרון</cite>
+      </div>
+      <div class="testimonial-slide">
+        <blockquote>"בהמלצת חבר הגעתי סקפטי לגמרי, לא היה פשוט עבורי להיפתח אבל הופתעתי מהאמון שנתתי בך, תודה על הסבלנות."</blockquote>
+        <cite>חגי</cite>
+      </div>
+      <div class="testimonial-slide">
+        <blockquote>"הגעתי אלייך אחרי משבר בזוגיות, מצאתי את עצמי יושבת ובוכה, עם כאב פנימי ובלבול גדול. הושטת לי יד ומשכת אותי למעלה, מכל מפגש יצאתי חזקה יותר ומלאת תקווה. תודה לך טליה אהובה, אין לי ספק שזאת המתנה הכי טובה שיכלתי לתת לעצמי לגיל 38"</blockquote>
+        <cite>אפרת</cite>
+      </div>
     </div>
     <div class="testimonial-dots" aria-hidden="true">
       <button class="active" aria-label="עדות 1"></button>
@@ -174,7 +176,13 @@ document.querySelectorAll('.dropdown-toggle').forEach(btn => {
   let current = 0;
 
   function show(n) {
-    slides[current].classList.remove('active');
+    const old = slides[current];
+    old.classList.remove('active');
+    old.classList.add('leaving');
+    old.addEventListener('transitionend', function onEnd() {
+      old.classList.remove('leaving');
+      old.removeEventListener('transitionend', onEnd);
+    });
     dots[current].classList.remove('active');
     current = (n + slides.length) % slides.length;
     slides[current].classList.add('active');
