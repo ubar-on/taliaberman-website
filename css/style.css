@@ -307,8 +307,8 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .service-col h2 {
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 36px;
+  font-weight: 600;
   margin-bottom: 16px;
   color: #39251C;
 }
@@ -343,8 +343,8 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .service-card h2 {
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 36px;
+  font-weight: 600;
   margin-bottom: 16px;
 }
 
