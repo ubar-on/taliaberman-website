@@ -153,7 +153,7 @@ img { max-width: 100%; height: auto; display: block; }
   margin: 0;
   font-family: 'DanaYad', cursive;
   font-size: 22px;
-  font-weight: 400;
+  font-weight: bold;
   color: #000;
   text-align: right;
 }
@@ -195,6 +195,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* the ייעוץ ואימון subpages each close with one large cursive line before the final CTA */
 .page-content p.cursive-line {
   font-family: 'DanaYad', cursive;
+  font-weight: bold;
   color: #39251C;
   line-height: 1.1;
 }
