@@ -69,6 +69,8 @@ img { max-width: 100%; height: auto; display: block; }
   align-items: center;
   justify-content: flex-start;
   height: 73px;
+  max-width: none;
+  padding-right: 56px;
 }
 
 .nav-links {
@@ -150,7 +152,7 @@ img { max-width: 100%; height: auto; display: block; }
   left: 6%;
   margin: 0;
   font-family: 'DanaYad', cursive;
-  font-size: 44px;
+  font-size: 22px;
   font-weight: 400;
   color: #000;
   text-align: right;
@@ -216,27 +218,28 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .credentials {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: auto 380px;
+  justify-content: center;
+  align-items: stretch;
   gap: 32px;
   margin-top: 32px;
 }
 
 .credentials-photo {
-  flex: 0 0 220px;
+  height: 100%;
+  aspect-ratio: 1;
 }
 
 .credentials-photo img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 306 / 307;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
 
 .credentials-text {
-  flex: 1;
-  min-width: 0;
+  max-width: 380px;
 }
 
 .credentials-text h2 {
@@ -249,8 +252,9 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 @media (max-width: 700px) {
-  .credentials { flex-direction: column; }
-  .credentials-photo { flex: none; width: 200px; margin: 0 auto; }
+  .credentials { grid-template-columns: 1fr; }
+  .credentials-photo { width: 200px; height: auto; margin: 0 auto; }
+  .credentials-text { max-width: none; }
 }
 
 /* ── Home Hero ── */
@@ -281,15 +285,23 @@ img { max-width: 100%; height: auto; display: block; }
 .home-poem {
   position: absolute;
   top: 74px;
-  right: 95px;
+  right: 56px;
   font-family: 'DanaYad', cursive;
-  font-size: 65px;
-  line-height: 39px;
+  font-size: 33px;
+  line-height: 20px;
   color: #FFF8F1;
   text-align: right;
   max-width: none;
   padding: 0;
 }
+
+.poem-line {
+  display: block;
+}
+
+.poem-line:nth-child(2) { margin-right: 10px; }
+.poem-line:nth-child(3) { margin-right: 20px; }
+.poem-line:nth-child(4) { margin-right: 30px; }
 
 /* ── Home Service Sections ── */
 .services-row1 {
