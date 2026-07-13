@@ -194,6 +194,44 @@ img { max-width: 100%; height: auto; display: block; }
   margin-bottom: 8px;
 }
 
+.credentials {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.credentials-photo {
+  flex: 0 0 220px;
+}
+
+.credentials-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 306 / 307;
+  object-fit: cover;
+  display: block;
+}
+
+.credentials-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.credentials-text h2 {
+  text-align: start;
+  margin-top: 0;
+}
+
+.credentials-text ul {
+  text-align: start;
+}
+
+@media (max-width: 700px) {
+  .credentials { flex-direction: column; }
+  .credentials-photo { flex: none; width: 200px; margin: 0 auto; }
+}
+
 /* ── Home Hero ── */
 .home-hero {
   position: relative;
