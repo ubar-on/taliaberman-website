@@ -186,6 +186,11 @@ img { max-width: 100%; height: auto; display: block; }
   text-align: start;
 }
 
+/* two closing sentences on אודות-הדרך are centered on live despite the page's right-aligned body */
+.page-content--start p.text-center {
+  text-align: center;
+}
+
 .page-content ul {
   margin: 0 24px 16px 0;
 }
