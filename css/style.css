@@ -288,7 +288,7 @@ img { max-width: 100%; height: auto; display: block; }
   right: 56px;
   font-family: 'DanaYad', cursive;
   font-size: 33px;
-  line-height: 20px;
+  line-height: 48px;
   color: #FFF8F1;
   text-align: right;
   max-width: none;
@@ -299,9 +299,9 @@ img { max-width: 100%; height: auto; display: block; }
   display: block;
 }
 
-.poem-line:nth-child(2) { margin-right: 10px; }
-.poem-line:nth-child(3) { margin-right: 20px; }
-.poem-line:nth-child(4) { margin-right: 30px; }
+.poem-line:nth-child(2) { margin-right: 85px; }
+.poem-line:nth-child(3) { margin-right: 124px; }
+.poem-line:nth-child(4) { margin-right: 164px; }
 
 /* ── Home Service Sections ── */
 .services-row1 {
@@ -444,6 +444,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 .testimonial-slide blockquote {
   font-family: 'DanaYad', cursive;
+  font-weight: bold;
   font-size: 26px;
   line-height: 1.6;
   margin-bottom: 24px;
