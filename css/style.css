@@ -47,6 +47,16 @@
   font-style: normal;
   font-display: swap;
 }
+/* Assistant Medium — live renders bold body text as a real medium-weight face
+   (assistant-light@700); our Light body face only has 400, so <strong> faux-bolds
+   too heavy. Hebrew subset (the bold body runs are Hebrew). */
+@font-face {
+  font-family: 'Assistant Medium';
+  src: url('/fonts/Assistant-Medium-hebrew.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 @font-face {
   font-family: 'DanaYad';
   src: url('/fonts/DanaYad-Regular.woff') format('woff');
@@ -285,6 +295,12 @@ img { max-width: 100%; height: auto; display: block; }
 /* live spaces this page's body paragraphs further apart than our 16px default */
 .page-content--about p {
   margin-bottom: 26px;
+}
+
+/* live's bold body text is a real medium weight, not our heavier faux-bold */
+.page-content--about strong {
+  font-family: 'Assistant Medium', 'Assistant', Arial, Helvetica, sans-serif;
+  font-weight: 500;
 }
 
 .page-content ul {
