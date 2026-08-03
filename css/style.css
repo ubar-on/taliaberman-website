@@ -297,8 +297,10 @@ img { max-width: 100%; height: auto; display: block; }
   margin-bottom: 26px;
 }
 
-/* live's bold body text is a real medium weight, not our heavier faux-bold */
-.page-content--about strong {
+/* Body bold: our Assistant Light body face has only weight 400, so <strong>
+   would synthesize a too-heavy faux-bold. Live uses a real medium weight
+   (assistant-light@700) — use real Assistant Medium site-wide. */
+strong {
   font-family: 'Assistant Medium', 'Assistant', Arial, Helvetica, sans-serif;
   font-weight: 500;
 }
