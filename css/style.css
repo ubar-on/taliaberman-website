@@ -342,6 +342,7 @@ img { max-width: 100%; height: auto; display: block; }
   flex: 0 0 25%;
   min-width: 0;
   padding: 48px 40px;
+  text-align: center;
 }
 
 .service-col--personal {
