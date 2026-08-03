@@ -38,6 +38,15 @@
   font-display: swap;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+/* Assistant ExtraBold — live Wix's 'assistant-semibold' subtitle face renders heavier
+   than our Bold; ExtraBold (800) matches its weight. Hebrew subset only (subtitles are Hebrew). */
+@font-face {
+  font-family: 'Assistant ExtraBold';
+  src: url('/fonts/Assistant-ExtraBold-hebrew.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
 @font-face {
   font-family: 'DanaYad';
   src: url('/fonts/DanaYad-Regular.woff') format('woff');
@@ -231,6 +240,21 @@ img { max-width: 100%; height: auto; display: block; }
   text-align: start;
 }
 
+/* this page's title also matches live's heavier 'assistant-semibold' weight (ExtraBold) + 38px size */
+.page-content--start h1 {
+  font-size: 38px;
+  font-weight: 800;
+  font-family: 'Assistant ExtraBold', 'Assistant', Arial, Helvetica, sans-serif;
+}
+
+/* live also right-aligns this page's subtitles (elsewhere page-content h2 is centered) */
+.page-content--start h2 {
+  text-align: start;
+  font-size: 18px;
+  font-weight: 800;
+  font-family: 'Assistant ExtraBold', 'Assistant', Arial, Helvetica, sans-serif;
+}
+
 /* two closing sentences on אודות-הדרך are centered on live despite the page's right-aligned body */
 .page-content--start p.text-center {
   text-align: center;
@@ -242,6 +266,13 @@ img { max-width: 100%; height: auto; display: block; }
 
 .page-content ul li {
   margin-bottom: 8px;
+}
+
+/* live keeps this page's bullet lists tight (line-height normal, no inter-item margin);
+   must follow .page-content ul li — same specificity, later rule wins the margin */
+.page-content--start ul li {
+  line-height: 1.4;
+  margin-bottom: 0;
 }
 
 .credentials {
