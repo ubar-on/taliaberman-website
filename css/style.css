@@ -260,6 +260,21 @@ img { max-width: 100%; height: auto; display: block; }
   text-align: center;
 }
 
+/* אודות (בנימה אישית): title matches the אודות-הדרך title (38px), subtitle matches
+   the אודות-הדרך subtitles (18px); both ExtraBold. */
+.page-content--about h1,
+.page-content--about h2 {
+  font-weight: 800;
+  font-family: 'Assistant ExtraBold', 'Assistant', Arial, Helvetica, sans-serif;
+}
+.page-content--about h1 { font-size: 38px; }
+.page-content--about h2 { font-size: 18px; }
+
+/* live spaces this page's body paragraphs further apart than our 16px default */
+.page-content--about p {
+  margin-bottom: 26px;
+}
+
 .page-content ul {
   margin: 0 24px 16px 0;
 }
@@ -279,13 +294,13 @@ img { max-width: 100%; height: auto; display: block; }
   display: grid;
   grid-template-columns: auto 380px;
   justify-content: center;
-  align-items: stretch;
+  align-items: start;
   gap: 32px;
   margin-top: 32px;
 }
 
 .credentials-photo {
-  height: 100%;
+  width: 306px;
   aspect-ratio: 1;
 }
 
