@@ -20,6 +20,24 @@
   font-style: normal;
   font-display: swap;
 }
+/* Assistant Light — the live Wix site sets body copy in assistant-light (a lighter
+   weight than Regular); split hebrew/latin subsets mirror Google's own delivery. */
+@font-face {
+  font-family: 'Assistant Light';
+  src: url('/fonts/Assistant-Light-hebrew.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+@font-face {
+  font-family: 'Assistant Light';
+  src: url('/fonts/Assistant-Light-latin.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 @font-face {
   font-family: 'DanaYad';
   src: url('/fonts/DanaYad-Regular.woff') format('woff');
@@ -36,11 +54,19 @@ html {
 }
 
 body {
-  font-family: 'Assistant', Arial, Helvetica, sans-serif;
+  font-family: 'Assistant Light', 'Assistant', Arial, Helvetica, sans-serif;
   font-size: 18px;
   line-height: 1.6;
   color: #000000;
   background-color: #FFF8F1;
+}
+
+/* Titles/labels keep the weighted Assistant faces (SemiBold/Bold); the Light body
+   face has only a 400 weight, so these must not inherit it or weights get synthesized. */
+.page-content h1, .page-content h2,
+.service-col h2, .service-card h2, .shave-kriya h2,
+.read-more, .testimonial-slide cite, .kriya-label {
+  font-family: 'Assistant', Arial, Helvetica, sans-serif;
 }
 
 a { color: #39251C; text-decoration: none; }
