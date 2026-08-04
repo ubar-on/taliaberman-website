@@ -82,7 +82,7 @@ html {
 body {
   font-family: 'Assistant Light', 'Assistant', Arial, Helvetica, sans-serif;
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.4;   /* live Wix body pacing site-wide: 18px -> 25.2px, 24px -> 33.6px */
   color: #000000;
   background-color: #FFF8F1;
 }
@@ -234,7 +234,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .page-content p {
-  margin-bottom: 16px;
+  margin-bottom: 25.2px;   /* live's paragraph gap is exactly one blank line (2 x 25.2px) */
   font-size: 18px;
   text-align: center;
 }
@@ -297,11 +297,6 @@ img { max-width: 100%; height: auto; display: block; }
 .page-content--about,
 .page-content--start {
   padding-top: 72px;
-}
-
-/* live spaces this page's body paragraphs further apart than our 16px default */
-.page-content--about p {
-  margin-bottom: 26px;
 }
 
 /* Body bold: our Assistant Light body face has only weight 400, so <strong>
