@@ -327,6 +327,11 @@ strong {
   font-size: 15px;
 }
 
+/* live's spacing around this smaller heading isn't the 25.2px the 18px sub-headers use */
+.page-content--start .credentials-title {
+  margin: 28.3px 0 20.4px;
+}
+
 /* live keeps this page's bullet lists tight (line-height normal, no inter-item margin);
    must follow .page-content ul li — same specificity, later rule wins the margin */
 .page-content--start ul li {
