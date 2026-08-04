@@ -266,16 +266,21 @@ img { max-width: 100%; height: auto; display: block; }
   margin-bottom: 53px;   /* live space below title on this page */
 }
 
-/* live also right-aligns this page's subtitles (elsewhere page-content h2 is centered) */
+/* live also right-aligns this page's subtitles (elsewhere page-content h2 is centered).
+   This page's sub-headers are the black ones — אודות/ייעוץ keep the brown #39251C —
+   and sit exactly one blank line (2 x 25.2px) from the text either side. */
 .page-content--start h2 {
   text-align: start;
   font-size: 18px;
   font-weight: 800;
   font-family: 'Assistant ExtraBold', 'Assistant', Arial, Helvetica, sans-serif;
+  color: #000;
+  margin: 25.2px 0;
 }
 
 /* two closing sentences on אודות-הדרך are centered on live despite the page's right-aligned body */
-.page-content--start p.text-center {
+.page-content--start p.text-center,
+.page-content--start h2.text-center {
   text-align: center;
 }
 
