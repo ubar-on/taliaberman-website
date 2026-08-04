@@ -320,6 +320,13 @@ strong {
   margin-bottom: 8px;
 }
 
+/* live drops this page's credentials block a size below the body copy: 15px/21px
+   for both the heading and its list (the challenges list above stays 18px) */
+.page-content--start .credentials-title,
+.page-content--start .credentials-title + ul li {
+  font-size: 15px;
+}
+
 /* live keeps this page's bullet lists tight (line-height normal, no inter-item margin);
    must follow .page-content ul li — same specificity, later rule wins the margin */
 .page-content--start ul li {
