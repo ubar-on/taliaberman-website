@@ -64,6 +64,13 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'GveretLevin';
+  src: url('/fonts/GveretLevinAlefAlefAlef-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* ── Reset & Base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -554,7 +561,7 @@ strong {
 }
 
 .testimonial-slide blockquote {
-  font-family: 'DanaYad', cursive;
+  font-family: 'GveretLevin', cursive;
   font-weight: bold;
   font-size: 26px;
   line-height: 1.6;
