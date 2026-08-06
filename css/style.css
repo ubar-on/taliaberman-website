@@ -364,9 +364,12 @@ strong {
   max-width: 380px;
 }
 
+/* live drops this heading a size below the body copy, like אודות-הדרך's;
+   21px bottom margin keeps the one-blank-line (42px) gap to the first item */
 .credentials-text h2 {
   text-align: start;
-  margin-top: 0;
+  font-size: 15px;
+  margin: 0 0 21px;
 }
 
 .credentials-text ul {
