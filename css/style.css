@@ -320,7 +320,10 @@ img { max-width: 100%; height: auto; display: block; }
   padding-top: 20px;   /* live's gap from the image to the title */
 }
 
-.page-content--counseling h1 {
+/* live gives both matched ייעוץ ואימון subpages the same title: 36px semibold black,
+   sitting on its own line box rather than the base 1.4 leading */
+.page-content--counseling h1,
+.page-content--coaching h1 {
   font-size: 36px;
   font-weight: 600;
   font-family: 'Assistant', Arial, Helvetica, sans-serif;
@@ -353,6 +356,34 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* the ul/li rules for this page live below .page-content ul — same specificity, later wins */
+
+/* ── אימון זוגי ── */
+.page-hero--coaching {
+  max-width: 687px;
+  height: 387px;
+  margin-top: 22px;
+}
+
+/* live centres this page's verse over the image; the ייעוץ one is anchored top-right */
+.page-hero--coaching .hero-quote {
+  top: 30%;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+
+.page-content--coaching {
+  max-width: 687px;   /* live runs this page's copy in a column the width of the image */
+  padding-top: 9px;   /* live's gap from the image to the title */
+}
+
+/* live leaves a deeper break before the closing cursive line than the plain
+   paragraph gap, and a slightly deeper one after it (margins collapse, so these
+   are the totals, not additions to the 25.2px above) */
+.page-content--coaching p.cursive-line {
+  margin-top: 48.2px;
+  margin-bottom: 31.2px;
+}
 
 /* Body bold: our Assistant Light body face has only weight 400, so <strong>
    would synthesize a too-heavy faux-bold. Live uses a real medium weight
