@@ -113,8 +113,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ── Navigation ── */
 .site-nav {
-  background-color: #FFF8F1;
-  border-bottom: 1px solid #e8ddd4;
+  background-color: #FFF8F1;   /* live's header has no border under it */
 }
 
 .site-nav .container {
@@ -305,6 +304,56 @@ img { max-width: 100%; height: auto; display: block; }
   padding-top: 72px;
 }
 
+/* ── ייעוץ אישי - עין הבדולח ──
+   live sizes each subpage's hero separately (this one 698x402 at y=81; אימון-זוגי,
+   for instance, is 687x387 at y=95), so the size lives on the page, not on .page-hero. */
+.page-hero--counseling {
+  max-width: 698px;
+  height: 402px;
+  margin-top: 8px;
+}
+
+/* live splits this page in two: the opening block is centered, and everything from
+   the first sub-header down is start-aligned. Its sub-headers are body-sized
+   (18px/25.2) semibold, not the 24px centered headings the base .page-content uses. */
+.page-content--counseling {
+  padding-top: 20px;   /* live's gap from the image to the title */
+}
+
+.page-content--counseling h1 {
+  font-size: 36px;
+  font-weight: 600;
+  font-family: 'Assistant', Arial, Helvetica, sans-serif;
+  line-height: normal;
+  color: #000;
+  margin-bottom: 11px;
+}
+
+.page-content--counseling h2 {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Assistant', Arial, Helvetica, sans-serif;
+  text-align: start;
+  margin: 0;   /* the preceding p's 25.2px margin already makes the blank line above */
+}
+
+/* the one centered statement mid-page; live renders it a touch heavier than the
+   sub-headers and leaves a blank line before the next one */
+.page-content--counseling h2.text-center {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 25.2px;
+}
+
+/* only the copy that hangs off a sub-header is start-aligned — the opening
+   paragraphs and the closing two lines stay centered, as on live */
+.page-content--counseling h2 + p,
+.page-content--counseling h2 + ul {
+  text-align: start;
+}
+
+/* the ul/li rules for this page live below .page-content ul — same specificity, later wins */
+
 /* Body bold: our Assistant Light body face has only weight 400, so <strong>
    would synthesize a too-heavy faux-bold. Live uses a real medium weight
    (assistant-light@700) — use real Assistant Medium site-wide. */
@@ -319,6 +368,16 @@ strong {
 
 .page-content ul li {
   margin-bottom: 8px;
+}
+
+/* live writes ייעוץ אישי's list as plain lines: no bullet, no indent, body line pacing */
+.page-content--counseling ul {
+  list-style: none;
+  margin: 0 0 25.2px;
+}
+
+.page-content--counseling ul li {
+  margin-bottom: 0;
 }
 
 /* live drops this page's credentials block a size below the body copy: 15px/21px
