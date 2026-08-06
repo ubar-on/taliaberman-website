@@ -17,7 +17,7 @@
       <li><a href="/אודות-הדרך/">אודות</a></li>
       <li><a href="/אודות/">בנימה אישית</a></li>
       <li class="has-dropdown">
-        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">ייעוץ ואימון ▾</button>
+        <a href="/#services" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">ייעוץ ואימון ▾</a>
         <ul class="dropdown">
           <li><a href="/ייעוץ-אישי-עין-הבדולח/">ייעוץ אישי - עין הבדולח</a></li>
           <li><a href="/אימון-זוגי/">אימון זוגי</a></li>
@@ -62,7 +62,7 @@
   </div>
 
   <!-- Row 2: Three service cards (3-column full-width) -->
-  <div class="services-row2">
+  <div class="services-row2" id="services">
     <div class="service-card service-card--counseling">
       <svg class="card-icon" viewBox="20 20 160 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M100.001 20C55.818 20 20 55.817 20 100s35.818 80 80.001 80C144.182 180 180 144.183 180 100s-35.818-80-79.999-80zm39.726 85.834l-7.253 7.254-32.472 32.472-32.472-32.472-7.256-7.254c-8.93-8.93-8.93-23.542 0-32.472s23.541-8.93 32.472 0l7.256 7.254 7.253-7.254c8.93-8.93 23.541-8.93 32.472 0s8.93 23.543 0 32.472z"/></svg>
       <h2>ייעוץ ואימון אישי</h2>
@@ -163,7 +163,10 @@
 
 <script>
 document.querySelectorAll('.dropdown-toggle').forEach(btn => {
-  btn.addEventListener('click', () => {
+  btn.addEventListener('click', e => {
+    // ponytail: hover devices already open the menu on :hover, so let the click follow the link (matches live)
+    if (matchMedia('(hover: hover)').matches) return;
+    e.preventDefault();
     const li = btn.closest('.has-dropdown');
     const open = li.classList.toggle('open');
     btn.setAttribute('aria-expanded', open);

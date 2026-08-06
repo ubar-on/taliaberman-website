@@ -77,6 +77,7 @@
 
 html {
   direction: rtl;
+  scroll-behavior: smooth;   /* live smooth-scrolls to the services anchor (~1.2s), doesn't jump */
 }
 
 body {

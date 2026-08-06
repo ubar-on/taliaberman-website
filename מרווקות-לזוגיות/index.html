@@ -16,7 +16,7 @@
       <li><a href="/אודות-הדרך/">אודות</a></li>
       <li><a href="/אודות/">בנימה אישית</a></li>
       <li class="has-dropdown">
-        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">ייעוץ ואימון ▾</button>
+        <a href="/#services" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">ייעוץ ואימון ▾</a>
         <ul class="dropdown">
           <li><a href="/ייעוץ-אישי-עין-הבדולח/">ייעוץ אישי - עין הבדולח</a></li>
           <li><a href="/אימון-זוגי/">אימון זוגי</a></li>
@@ -72,7 +72,10 @@
 
 <script>
 document.querySelectorAll('.dropdown-toggle').forEach(btn => {
-  btn.addEventListener('click', () => {
+  btn.addEventListener('click', e => {
+    // ponytail: hover devices already open the menu on :hover, so let the click follow the link (matches live)
+    if (matchMedia('(hover: hover)').matches) return;
+    e.preventDefault();
     const li = btn.closest('.has-dropdown');
     const open = li.classList.toggle('open');
     btn.setAttribute('aria-expanded', open);
