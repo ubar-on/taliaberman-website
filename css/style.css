@@ -149,7 +149,9 @@ img { max-width: 100%; height: auto; display: block; }
   cursor: pointer;
   background: none;
   border: none;
-  font-family: inherit;
+  /* not the Light body face: live's nav is assistant-light@700, which resolves to the
+     regular cut — measured identical to our 'Assistant'@400 on all six nav strings */
+  font-family: 'Assistant', Arial, Helvetica, sans-serif;
 }
 
 .nav-links a:hover,
