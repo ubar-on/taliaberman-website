@@ -155,6 +155,13 @@ img { max-width: 100%; height: auto; display: block; }
 .nav-links a:hover,
 .nav-links .dropdown-toggle:hover { color: #39251C; text-decoration: none; }
 
+/* live marks the current page's nav item brown — and when you're on one of the
+   ייעוץ ואימון sub-pages it marks the parent item, not the (hidden) child */
+.nav-links > li > a[aria-current="page"],
+.nav-links .has-dropdown:has(a[aria-current="page"]) > .dropdown-toggle {
+  color: #5B4D43;
+}
+
 /* Dropdown */
 .nav-links .has-dropdown { position: relative; }
 
@@ -323,7 +330,8 @@ img { max-width: 100%; height: auto; display: block; }
 /* live gives both matched ייעוץ ואימון subpages the same title: 36px semibold black,
    sitting on its own line box rather than the base 1.4 leading */
 .page-content--counseling h1,
-.page-content--coaching h1 {
+.page-content--coaching h1,
+.page-content--singles h1 {
   font-size: 36px;
   font-weight: 600;
   font-family: 'Assistant', Arial, Helvetica, sans-serif;
@@ -383,6 +391,30 @@ img { max-width: 100%; height: auto; display: block; }
 .page-content--coaching p.cursive-line {
   margin-top: 48.2px;
   margin-bottom: 31.2px;
+}
+
+/* ── מרווקות לזוגיות ── */
+.page-hero--singles {
+  max-width: 698px;
+  height: 392px;
+  margin-top: 23px;
+}
+
+/* live sets this page's verse right-of-centre over the image (ink centre ~72%
+   across, ~13% down) rather than anchored to an edge like the other two */
+.page-hero--singles .hero-quote {
+  top: 9.4%;
+  left: 44%;
+  right: 0;
+  text-align: center;
+}
+
+.page-content--singles {
+  padding-top: 30px;   /* live's gap from the image to the title */
+}
+
+.page-content--singles h1 {
+  margin-bottom: 33px;
 }
 
 /* Body bold: our Assistant Light body face has only weight 400, so <strong>
@@ -769,7 +801,7 @@ strong {
   margin-bottom: 24px;
 }
 
-.site-footer a { color: #39251C; text-decoration: underline; }
+.site-footer a { color: #000; text-decoration: underline; }   /* live's footer contact text is black, links included */
 
 .footer-contact {
   display: flex;
