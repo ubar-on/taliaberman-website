@@ -58,13 +58,6 @@
   font-display: swap;
 }
 @font-face {
-  font-family: 'DanaYad';
-  src: url('/fonts/DanaYad-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
   font-family: 'GveretLevin';
   src: url('/fonts/GveretLevinAlefAlefAlef-Regular.woff2') format('woff2');
   font-weight: 400;
@@ -206,17 +199,20 @@ img { max-width: 100%; height: auto; display: block; }
   display: block;
 }
 
+/* Hero verses are SVG outlines of live Wix's Gulash MF (see images/cursive/), not
+   live text — Gulash is a commercial face we can't self-host. Each page sets
+   left/width as a % of the hero so the verse scales with it, and top in px
+   because the hero's height is fixed. */
 .hero-quote {
   position: absolute;
-  top: 18%;
-  right: 6%;
-  left: 6%;
   margin: 0;
-  font-family: 'DanaYad', cursive;
-  font-size: 22px;
-  font-weight: bold;
-  color: #000;
-  text-align: right;
+  line-height: 0;
+}
+
+.hero-quote img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* ── Page Content ── */
@@ -253,12 +249,17 @@ img { max-width: 100%; height: auto; display: block; }
   margin-bottom: 0;
 }
 
-/* the ייעוץ ואימון subpages each close with one large cursive line before the final CTA */
+/* the ייעוץ ואימון subpages each close with one large cursive line before the
+   final CTA — also a Gulash SVG, so the paragraph's height is just the image */
 .page-content p.cursive-line {
-  font-family: 'DanaYad', cursive;
-  font-weight: bold;
-  color: #39251C;
-  line-height: 1.1;
+  line-height: 0;
+}
+
+.page-content p.cursive-line img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* אודות-הדרך is the one subpage whose body copy is right-aligned on live Wix, not centered like the rest */
@@ -322,11 +323,28 @@ img { max-width: 100%; height: auto; display: block; }
   margin-top: 8px;
 }
 
+/* live anchors this verse top-right, its box starting 10px above the image top
+   (ascent padding only — the ink starts 27px inside) */
+.page-hero--counseling .hero-quote {
+  left: 73.596%;
+  top: -10px;
+  width: 22.876%;
+}
+
 /* live splits this page in two: the opening block is centered, and everything from
    the first sub-header down is start-aligned. Its sub-headers are body-sized
    (18px/25.2) semibold, not the 24px centered headings the base .page-content uses. */
 .page-content--counseling {
   padding-top: 20px;   /* live's gap from the image to the title */
+}
+
+/* The SVG carries the font's full ascent/descent (107.4px here) while live's line
+   box is only 91px, so the artwork is taller than the line it replaces. These pull
+   the neighbours back in by the overhang; must stay after `.page-content p.tight`,
+   which it ties with on specificity. */
+.page-content--counseling p.cursive-line {
+  margin-top: -4.4px;
+  margin-bottom: -7.7px;
 }
 
 /* live gives both matched ייעוץ ואימון subpages the same title: 36px semibold black,
@@ -374,12 +392,12 @@ img { max-width: 100%; height: auto; display: block; }
   margin-top: 22px;
 }
 
-/* live centres this page's verse over the image; the ייעוץ one is anchored top-right */
+/* live sets this verse just left of centre over the image (ink box at 112.7, 74.1
+   from the hero's top-left, measured on live at 1440x900) */
 .page-hero--coaching .hero-quote {
-  top: 30%;
-  right: 0;
-  left: 0;
-  text-align: center;
+  left: 16.400%;
+  top: 74.1px;
+  width: 64.581%;
 }
 
 .page-content--coaching {
@@ -391,8 +409,8 @@ img { max-width: 100%; height: auto; display: block; }
    paragraph gap, and a slightly deeper one after it (margins collapse, so these
    are the totals, not additions to the 25.2px above) */
 .page-content--coaching p.cursive-line {
-  margin-top: 48.2px;
-  margin-bottom: 31.2px;
+  margin-top: 45.8px;
+  margin-bottom: 30.7px;
 }
 
 /* ── מרווקות לזוגיות ── */
@@ -402,17 +420,23 @@ img { max-width: 100%; height: auto; display: block; }
   margin-top: 23px;
 }
 
-/* live sets this page's verse right-of-centre over the image (ink centre ~72%
-   across, ~13% down) rather than anchored to an edge like the other two */
+/* live sets this page's verse right-of-centre, its box starting 23px above the
+   image top — only the empty ascent padding overhangs, the ink starts 40px in */
 .page-hero--singles .hero-quote {
-  top: 9.4%;
-  left: 44%;
-  right: 0;
-  text-align: center;
+  left: 48.138%;
+  top: -23px;
+  width: 47.720%;
 }
 
 .page-content--singles {
   padding-top: 30px;   /* live's gap from the image to the title */
+}
+
+/* live's gaps around this page's closing line; the preceding paragraph is .tight
+   (no bottom margin), so this margin-top is the whole gap */
+.page-content--singles p.cursive-line {
+  margin-top: 12.2px;
+  margin-bottom: 17.7px;
 }
 
 .page-content--singles h1 {
@@ -539,26 +563,30 @@ strong {
   max-width: none;
 }
 
+/* The poem is four Gulash SVGs (see images/cursive/). Wix builds the staircase
+   with leading spaces inside each line; we express it as explicit right insets.
+   Offsets are from the hero's top-right, measured on live at 1440x900. */
 .home-poem {
   position: absolute;
-  top: 74px;
-  right: 56px;
-  font-family: 'DanaYad', cursive;
-  font-size: 33px;
-  line-height: 48px;
-  color: #FFF8F1;
-  text-align: right;
-  max-width: none;
+  top: 74.3px;
+  right: 94.4px;
+  width: 0;
+  margin: 0;
   padding: 0;
+  line-height: 0;
 }
 
 .poem-line {
+  position: absolute;
+  top: 0;
+  right: 0;
   display: block;
+  max-width: none;
 }
 
-.poem-line:nth-child(2) { margin-right: 85px; }
-.poem-line:nth-child(3) { margin-right: 124px; }
-.poem-line:nth-child(4) { margin-right: 164px; }
+.poem-line:nth-child(2) { top: 43px;  right: 83.6px; }
+.poem-line:nth-child(3) { top: 86px;  right: 131.5px; }
+.poem-line:nth-child(4) { top: 129px; right: 179.3px; }
 
 /* ── Home Service Sections ── */
 .services-row1 {
@@ -834,6 +862,7 @@ strong {
   .nav-links { gap: 0; }
   .nav-links a, .nav-links .dropdown-toggle { padding: 8px 6px; font-size: 13px; }
   .home-hero-banner { height: 280px; }
-  .home-poem { font-size: 14px; top: 12px; right: 12px; max-width: 160px; }
+  /* the poem is fixed-size artwork now, so scale the whole staircase down */
+  .home-poem { top: 12px; right: 12px; transform: scale(0.42); transform-origin: top right; }
   .testimonial-slide blockquote { font-size: 20px; }
 }
