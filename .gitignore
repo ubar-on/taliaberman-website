@@ -4,3 +4,4 @@ mission.md
 
 # Gulash font downloaded by tools/build-cursive.py (commercial, not redistributable)
 .cursive-build/
+__pycache__/

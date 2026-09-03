@@ -632,7 +632,7 @@ strong {
   color: #39251C;
 }
 
-.service-col p { font-size: 17px; margin-bottom: 12px; }
+.service-col p { font-size: 18px; margin-bottom: 12px; }
 
 /* 3-column service cards */
 .services-row2 {
@@ -667,7 +667,9 @@ strong {
   margin-bottom: 16px;
 }
 
-.service-card p { font-size: 17px; margin-bottom: 12px; }
+/* the card's own colour is inherited by its heading and CTA, but live sets this
+   body copy black rather than the card's #39251C */
+.service-card p { font-size: 18px; margin-bottom: 12px; color: #000; }
 
 .service-card .read-more { margin-top: auto; }
 
@@ -700,7 +702,7 @@ strong {
 
 .testimonials-track {
   position: relative;
-  max-width: 700px;
+  max-width: 926px;   /* live's widest blockquote column — the אפרת quote's artwork is 923.9px */
   margin: 0 auto;
   width: 100%;
   min-height: 260px;
@@ -728,19 +730,25 @@ strong {
   transform: translate(-100%, -50%);
 }
 
+/* the quote is an Adler SVG (see images/cursive/) — live sets these in Adler at
+   50px, which we can't self-host, so the artwork carries the type */
 .testimonial-slide blockquote {
-  font-family: 'GveretLevin', cursive;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.6;
-  margin-bottom: 24px;
-  color: #5B4D43;
+  margin: 0 0 24px;
+  line-height: 0;
+}
+
+.testimonial-slide blockquote img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .testimonial-slide cite {
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
+  color: #5B4D43;
 }
 
 .testimonial-dots {
@@ -864,5 +872,5 @@ strong {
   .home-hero-banner { height: 280px; }
   /* the poem is fixed-size artwork now, so scale the whole staircase down */
   .home-poem { top: 12px; right: 12px; transform: scale(0.42); transform-origin: top right; }
-  .testimonial-slide blockquote { font-size: 20px; }
+  /* the quote is fixed-size artwork now; it scales via max-width */
 }
